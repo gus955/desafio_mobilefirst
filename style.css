@@ -1,0 +1,75 @@
+:root{
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header{
+    background-color: #8E9AAF;
+    text-align: center;
+    height: 250px;
+}
+
+header h1{
+    background: #CBC0D3;
+    color: white;
+    font-size: 4rem;
+    height: 4.9rem;
+}
+
+main{
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+    background-color: #EFF1FF;
+}
+
+main p{
+    font-size: 1.2rem;
+    margin: 0 3.2rem;
+}
+
+.card{
+    position: relative;
+}
+
+.card img{
+    border-radius: 1.0rem;
+
+    object-fit: cover;
+    
+}
+
+.card h2{
+    position: absolute;
+    top: 2.5rem;
+    right: 70.0rem;
+    width:fit-content;  
+
+    display: flex;
+
+}
+
+.card h2 span{
+
+
+    font-family: 'Staatliches', cursive;
+    border-radius: 2rem;
+    padding: 0 1.6rem;
+
+    display: inline-flex;
+    align-items: center;
+    background-color: #FEEAFA;
+
+    display: inline-flex;
+    align-items: center;
+}
+
+
+
