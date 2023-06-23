@@ -9,7 +9,7 @@
 }
 
 .page{
-    max-width: 58rem;
+    max-width: 38rem;
     margin:0 auto;
 }
 
@@ -17,6 +17,8 @@ header{
     background-color: #8E9AAF;
     text-align: center;
     height: 250px;
+
+    animation: right 700ms;
 }
 
 header h1{
@@ -26,7 +28,12 @@ header h1{
     height: 4.9rem;
 }
 
+header p{
+    display: none;
+}
+
 main{
+
     text-align: center;
     display: grid;
     gap: 3rem;
@@ -35,10 +42,14 @@ main{
 
 main p{
     font-size: 1.2rem;
+
+    animation: appear s;
 }
 
 .card{
     position: relative;
+
+    animation: left 700ms;
 }
 
 .card img{
@@ -52,7 +63,7 @@ main p{
 .card h2{
     position: absolute;
     top: 1.8rem;
-    right: 13.5rem;
+    right: 4.5rem;
 
     font-family: 'Staatliches', cursive;
     border-radius: 2rem;
@@ -68,4 +79,133 @@ main p{
     opacity: 0.6
 }
 
+footer{
+    display: none;
 
+    
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: #4a4e69;
+
+}
+
+@keyframes right {
+    0%{
+        opacity: 0
+    }
+
+    50%{
+        opacity: 0.5;
+        transform: translateX(15rem)
+        
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+
+
+@keyframes left {
+    0%{
+        opacity: 0
+    }
+
+    50%{
+        opacity: 0.5;
+        transform: translateX(-15rem)
+        
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+
+
+@keyframes appear {
+    0%{
+        opacity: 0
+    }
+
+    100%{
+        opacity: 1
+    }
+}
+
+footer{
+    display: none;
+}
+
+@media (min-width: 768px){
+
+    .page{
+        display: flex;
+        max-width: 150rem;
+    }
+
+    header{
+        height:97rem;
+        width: 45rem;
+       align-items: center;
+    }
+
+    header p{
+        font-family: 'Palanquin', sans-serif;
+        font-size: 2.4rem;
+        color: white;
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 3.2rem;
+    }
+
+    main p{
+        display: none;
+    }
+
+    main{
+        padding: 3.2rem 4.0rem;
+        grid-template-areas: "A B C"
+                             "D B F"
+                             "D E F"
+    }    
+
+    main > div:nth-child(2) {
+        grid-area: A;
+      }
+    
+      main > div:nth-child(3) {
+        grid-area: B;
+      }
+    
+      main > div:nth-child(4) {
+        grid-area: C;
+      }
+    
+      main > div:nth-child(5) {
+        grid-area: D;
+      }
+    
+      main > div:nth-child(6) {
+        grid-area: E;
+      }
+    
+      main > div:nth-child(7) {
+        grid-area: F;
+      }
+
+      .card h2 span{
+        display: none;
+      }
+    footer{
+        display: block;
+
+    }
+}
